@@ -9,8 +9,8 @@ L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
 }).addTo(map)
 
-var marker = L.marker([6.235143, -75.589028]).addTo(map);
-var marker = L.marker([6.256702, -75.590551]).addTo(map);
+var marker = L.marker([6.235143, -75.589028]).addTo(map).bindPopup('Unidad Deportiva').openPopup();
+var marker = L.marker([6.256702, -75.590551]).addTo(map).bindPopup('Estadio').openPopup();
 
 
 $.ajax({
@@ -19,7 +19,7 @@ $.ajax({
     success: function(result){
         console.log(result);
         result.bicicletas.forEach(function(bici) {
-            L.marker(bici.ubicacion, { title: bici.id}).addTo(map);
+            L.marker(bici.ubicacion, {title: bici.id}).addTo(map);
         });
     }
 })
