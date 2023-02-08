@@ -1,6 +1,11 @@
 # Sara Tobón R.
 ## Entrega mapa
+
+## Antes de correrlo, ingresar a la carpeta maps en la terminal con
+- cd maps
+
 ### Comando para correr: 
+
 - DEBUG=maps:* npm run devstart
 
 ## Endpoints
@@ -15,4 +20,3 @@
 
 - Actualizar bicicleta 
     - http://localhost:3000/api/bicicletas/update
-    
